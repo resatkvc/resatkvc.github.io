@@ -3,7 +3,7 @@ title: 'Yazılım Yaşam Döngüsü Nedir? Software Development Life Cycle(SDLC)
 date: 2024-01-02T00:00:00+00:00
 author: Reşat Kavcı
 layout: post
-permalink: /Yazılım-Yaşam-Döngüsü-Nedir?-Software-Development-Life-Cycle(SDLC)/
+permalink: /yazilim-yasam-döngüsü/
 categories: SoftwareDevelopment
 tags: [Test, Software Test, QA, Testing, SDLC]
 img: / assets/img/posts/software-development-life-cycle/yazılım-yasam-döngüsü-asamaları.jpg
