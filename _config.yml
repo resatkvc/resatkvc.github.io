@@ -1,0 +1,82 @@
+# Site settings
+site: Reşat Kavci
+title:  Personal Research Blog - Test, Test Auromation, Software Test, API Test
+keywords:  Reşat Kavci, blog, Test, Test Auromation, Software Test, API Test
+description: >-
+   Reşat Kavci Personal Blog
+lang: en-US
+timezone:  Europe/Istanbul
+repo: https://github.com/resatkvc/resatkvc.github.io # site repo [optional]
+google_verify:      XX # Put your Google Verification here
+#google_analytics:   UA-73661033-5 # Put your Google Analytics code
+discus-identifier: XX
+
+# Author settings
+author:
+  name:  Reşat Kavci
+  bio: Digitürk; Software Test Automation Engineer </br> TekhneLogos; Software Test Engineer </br> E-mail; kavciresat@gmail.com
+  picture: assets/img/Profil.jpg
+  github: resatkvc # github username
+  #twitter: furkanbilginn # twitter username
+  instagram: resatkvc # instagram username
+  linkedin: kavci # instagram username
+  email: kavciresat@gmail.com # email adress
+
+
+# URL settings
+url: "https://resatkvc.github.io/" # Domain Name of host. [username].github.io for github pages
+baseurl: "" # sub folder for jekyll site. only if jekyll site not in root of host. leave blank if not wishd. always add / in front.
+permalink: pretty
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+
+exclude:
+  - .jekyll-cache
+  - .obsidian
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE.md
+  - README.md
+  - CONTRIBUTING.md
+
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-relative-links
+paginate: 30
+paginate_path: "/page/:num"
+
+collections:
+  pages:
+    output: true
+    permalink: /:name
+  posts:
+    output: true
+    permalink: /:slug
+  
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+relative_links:
+  enabled:     true
+  collections: false
