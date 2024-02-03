@@ -6,16 +6,25 @@ layout: post
 permalink: /yazilim-yasam-döngüsü/
 categories: SoftwareDevelopment
 tags: [Test, Software Test, QA, Testing, SDLC]
-img: / assets/img/posts/software-development-life-cycle/yazılım-yasam-döngüsü-asamaları.jpg
+img: /assets/img/posts/software-development-life-cycle/yazılım-yasam-döngüsü-asamaları.jpg
 description: 'Yazılımın başlangıcından sonuna kadar geçirdiği aşamaların süreçsel ve yönetimsel bir yaklaşımla yönetilmesine ve adı gibi bir döngü içinde varolan bir süreçtir. Bu döngü altı(6) adımdan oluşmaktadır.'
 ---
 
-1- **Planlama(Planning):** Bu adımda Yazılım planlanması ve görev dağılımı yapılır. </br>
-2- **Analiz(Analysis):** Yazılım yaşam döngüsünün en önemli aşamalarından biri olarak kabul edilir. Çünkü Analiz sürecinde projenin tüm işlevleri detaylı olarak bu aşamada belirlenir. </br>
-3- **Tasarım(Design):** Bu aşamada Analiz(Analysis) aşamasında ortaya çıkan proje detayları baz alınarak projende gerekli durumlarda bileşenlere ayrılır. Bu aşamada projede yapılacak işlemler adım adım belirlenir ve bir plan oluşturulur. Planın yanı sıra bu aşamada tasarım dokümanı da oluşturulur. _(Tasarım dokümanında proje bilgileri (amaç, kapsam vs), sistem tasarım bilgileri, tasarım detayları, veri modeli, kullanıcı arayüz tasarımları, UML Diagramları. Tasarım dokümanının amacı, yazılım geliştiricinin yazılımını geliştirirken referans alacağı ve proje sürecinde/sonrasında projeye dahil olacak yeni yazılımcıların projeyi daha kolay anlayabilmesini sağlayacak teknik bir dokümantasyona sahip olması gerekliliğidir.)_ </br>
-4- **Uygulama/Üretim(Implementation):** İlk üç(3) aşamayı tamamlayıp yapılacak işlemleri detaylı olarak belirleyip projenin geliştirme aşamasıdır. Bu aşamada en kritik noktalardan biri artık Analiz işlemi yapılmaz. Proje artık Tasarım aşamasında oluşturulan planlama ile ilerlemelidir </br>
-5- **Test ve Entegrasyon(Testing and Integration):** Artık bu aşamada yazılım geliştirme tamamlanmıştır. Müşteriye sunulmadan önce Test ekibi tarafından beta testlerinin gerçekleştirilmesi aşamasıdır. Bu aşamada oluşan hatalar(Bug) çözümlenmesi için geri gönderilir ve herşey tamamlandıktan sonra proje artık yayına alınır. </br>
-6- **Bakım ve Onarım(Maintenence):** Bu aşama artık projenin yayında(live) olması demektir. Burada oluşabilecek hataların giderilmesi yazılımın iyileştirilmesi ve yeni işlevlerin eklenmesi sürecidir. Bu kısımda müşterilerden gelen geri bildirimlerlede bu gereksinimler belirlenir ve o yönde geliştirmeler sağlanır </br>
+![Picture description](assets\img\posts\software-development-life-cycle\yazılım-yasam-döngüsü-asamaları.jpg){: .center-image }
+
+Yazılımın başlangıcından sonuna kadar geçirdiği aşamaların süreçsel ve yönetimsel bir yaklaşımla yönetilmesine ve adı gibi bir döngü içinde varolan bir süreçtir. Bu döngü altı(6) adımdan oluşmaktadır.
+
+1- **Planlama(Planning):** Bu adımda Yazılım planlanması ve görev dağılımı yapılır.
+
+2- **Analiz(Analysis):** Yazılım yaşam döngüsünün en önemli aşamalarından biri olarak kabul edilir. Çünkü Analiz sürecinde projenin tüm işlevleri detaylı olarak bu aşamada belirlenir.
+
+3- **Tasarım(Design):** Bu aşamada Analiz(Analysis) aşamasında ortaya çıkan proje detayları baz alınarak projende gerekli durumlarda bileşenlere ayrılır. Bu aşamada projede yapılacak işlemler adım adım belirlenir ve bir plan oluşturulur. Planın yanı sıra bu aşamada tasarım dokümanı da oluşturulur. _(Tasarım dokümanında proje bilgileri (amaç, kapsam vs), sistem tasarım bilgileri, tasarım detayları, veri modeli, kullanıcı arayüz tasarımları, UML Diagramları. Tasarım dokümanının amacı, yazılım geliştiricinin yazılımını geliştirirken referans alacağı ve proje sürecinde/sonrasında projeye dahil olacak yeni yazılımcıların projeyi daha kolay anlayabilmesini sağlayacak teknik bir dokümantasyona sahip olması gerekliliğidir.)_ 
+
+4- **Uygulama/Üretim(Implementation):** İlk üç(3) aşamayı tamamlayıp yapılacak işlemleri detaylı olarak belirleyip projenin geliştirme aşamasıdır. Bu aşamada en kritik noktalardan biri artık Analiz işlemi yapılmaz. Proje artık Tasarım aşamasında oluşturulan planlama ile ilerlemelidir.
+
+5- **Test ve Entegrasyon(Testing and Integration):** Artık bu aşamada yazılım geliştirme tamamlanmıştır. Müşteriye sunulmadan önce Test ekibi tarafından beta testlerinin gerçekleştirilmesi aşamasıdır. Bu aşamada oluşan hatalar(Bug) çözümlenmesi için geri gönderilir ve herşey tamamlandıktan sonra proje artık yayına alınır.
+
+6- **Bakım ve Onarım(Maintenence):** Bu aşama artık projenin yayında(live) olması demektir. Burada oluşabilecek hataların giderilmesi yazılımın iyileştirilmesi ve yeni işlevlerin eklenmesi sürecidir. Bu kısımda müşterilerden gelen geri bildirimlerlede bu gereksinimler belirlenir ve o yönde geliştirmeler sağlanır.
 
 ## Kısaca SDLC’ nin Avanjları Nedir ?
 - Tüm paydaşlar için geliştirme sürecine ilişkin görünürlük
@@ -24,7 +33,8 @@ description: 'Yazılımın başlangıcından sonuna kadar geçirdiği aşamalar�
 - Sistematik yazılım teslimi ve daha iyi müşteri memnuniyeti
 
 ## Peki SDLC Modelleri Nelerdir ?
-Yazılım geliştirme, süreç geliştirme aşamasında süreçlerin düzeni ve nasıl uygulanacağını ifade eden modellerdir. Karmaşık düzeni azaltmak ve böylelikle oluşacak krizleri önler. En önemlisi ise ürünlerin belirli bir kalitede olmasına olanak sağlar. Nedir peki bu modeller;
+Yazılım geliştirme, süreç geliştirme aşamasında süreçlerin düzeni ve nasıl uygulanacağını ifade eden modellerdir. Karmaşık düzeni azaltmak ve böylelikle oluşacak krizleri önler. En önemlisi ise ürünlerin belirli bir kalitede olmasına olanak sağlar. 
+Nedir peki bu modeller;
 
 - Şelale Modeli (Waterfall Model)
 - V Modeli (V-Shaped Model)
