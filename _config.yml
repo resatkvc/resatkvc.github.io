@@ -1,5 +1,5 @@
 # Site settings
-site: Reşat Kavcı
+site: Reşat Kavci
 title:  Test Automation - Personal Research Blog - Test - Software Test - API Test
 keywords:  Reşat Kavci, blog, Test, Test Automation, Software Test, API Test
 description: >-
@@ -14,7 +14,7 @@ discus-identifier: XX
 # Author settings
 author:
   name:  Reşat KAVCI
-  bio: Digitürk; Software Automation Engineer </br> TekhneLogos; Software Test Engineer </br> E-mail; kavciresat@gmail.com
+  bio: Digitürk→ Software Automation Engineer </br> TekhneLogos→ Software Test Engineer </br> E-mail→ kavciresat@gmail.com
   picture: assets\img\profil.jpg
   github: resatkvc # github username
   #twitter: furkanbilginn # twitter username
