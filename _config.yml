@@ -13,9 +13,9 @@ discus-identifier: XX
 
 # Author settings
 author:
-  name:  Reşat KAVCI
+  name:  Reşat Kavcı
   bio: |
-    <strong>Test Automation Engineer</strong><br>
+    <strong>Software Test Automation Engineer</strong><br>
     Passionate about creating efficient and scalable test frameworks using the latest tools and technologies.<br><br>
     
     <strong>Professional Experience:</strong><br>
@@ -36,7 +36,7 @@ author:
   instagram: resatkvc # instagram username
   linkedin: kavci # instagram username
   email: kavciresat@gmail.com # email adress
-  medium: resatkvc # medium username
+  medium: kavciresat # medium username
   technologies:
     - name: Java
       icon: ☕

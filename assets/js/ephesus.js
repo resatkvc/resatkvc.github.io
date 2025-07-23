@@ -204,7 +204,7 @@ function initLikeAndBookmark() {
 
 // Medium Blog Entegrasyonu
 async function loadMediumPosts() {
-  const mediumUsername = 'resatkvc'; // Medium kullanıcı adınız
+  const mediumUsername = 'kavciresat'; // Medium kullanıcı adınız
   const rssUrl = `https://medium.com/feed/@${mediumUsername}`;
   
   try {
@@ -222,6 +222,11 @@ async function loadMediumPosts() {
     displayMediumPosts(items);
   } catch (error) {
     console.error('Medium posts yüklenemedi:', error);
+    // Hata durumunda loading mesajını kaldır
+    const mediumContainer = document.getElementById('mediumPosts');
+    if (mediumContainer) {
+      mediumContainer.innerHTML = '<div class="medium-section"><h2>📝 Medium Blog Yazılarım</h2><p>Yazılar yüklenirken bir hata oluştu. <a href="https://medium.com/@kavciresat" target="_blank">Medium profilinizi ziyaret edin</a>.</p></div>';
+    }
   }
 }
 
