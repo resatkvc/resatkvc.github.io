@@ -280,7 +280,7 @@ function displayMediumPosts(items) {
   
   let html = '<div class="medium-section"><h2>📝 Medium Blog Yazılarım</h2><div class="medium-grid">';
   
-  items.slice(0, 6).forEach(item => {
+  items.forEach(item => {
     const title = item.title || '';
     const link = item.link || '';
     const pubDate = item.pubDate || '';
@@ -347,6 +347,60 @@ function displayManualMediumPosts() {
       date: "03.06.2025",
       excerpt: "Merhabalar Bu yazımda, herkesin sıkça duyduğu ve gördüğü ama ne olduğunu ve ne için kullanıldığını merak ettiği bir konuya değinmek istiyorum. Operatö...",
       link: "https://medium.com/@resatkvc/java-operatörleri-test-otomasyonu"
+    },
+    {
+      title: "Java'da Değişkenler Nedir? Test Otomasyonunda Nasıl Kullanılır?",
+      date: "28.05.2025",
+      excerpt: "Merhabalar! 👋 Bu yazımda, Java programlama dilinin temel yapı taşlarından biri olan değişkenler (variables) konusunu ele alacağım. Değişkenler, her...",
+      link: "https://medium.com/@resatkvc/java-değişkenler-test-otomasyonu"
+    },
+    {
+      title: "Java'da Veri Tipleri Nedir? Test Otomasyonunda Nasıl Kullanılır?",
+      date: "25.05.2025",
+      excerpt: "Merhabalar! 👋 Bu yazımda, Java programlama dilinin temel yapı taşlarından biri olan veri tiplerini (data types) ele alacağım. Veri tipleri, her...",
+      link: "https://medium.com/@resatkvc/java-veri-tipleri-test-otomasyonu"
+    },
+    {
+      title: "Java'da String Metodları: Test Otomasyonunda Kullanım Alanları",
+      date: "20.05.2025",
+      excerpt: "Merhabalar! 👋 Bu yazımda, Java'da String sınıfının en çok kullanılan metodlarını ve bu metodların test otomasyonunda nasıl kullanıldığını ele alacağım...",
+      link: "https://medium.com/@resatkvc/java-string-metodları-test-otomasyonu"
+    },
+    {
+      title: "Selenium WebDriver'da Explicit Wait Kullanımı",
+      date: "15.05.2025",
+      excerpt: "Merhabalar! 👋 Bu yazımda, Selenium WebDriver'da Explicit Wait kullanımını ve neden önemli olduğunu ele alacağım. Explicit Wait, web elementlerinin...",
+      link: "https://medium.com/@resatkvc/selenium-webdriver-explicit-wait"
+    },
+    {
+      title: "TestNG ile Test Otomasyonu: Temel Kavramlar ve Kullanım",
+      date: "10.05.2025",
+      excerpt: "Merhabalar! 👋 Bu yazımda, Java tabanlı test otomasyonunda en popüler test framework'lerinden biri olan TestNG'yi ele alacağım. TestNG, JUnit'e...",
+      link: "https://medium.com/@resatkvc/testng-test-otomasyonu"
+    },
+    {
+      title: "Maven ile Test Otomasyonu Projesi Oluşturma",
+      date: "05.05.2025",
+      excerpt: "Merhabalar! 👋 Bu yazımda, Java tabanlı test otomasyonu projelerinde dependency management için kullanılan Maven'ı ele alacağım. Maven, proje...",
+      link: "https://medium.com/@resatkvc/maven-test-otomasyonu"
+    },
+    {
+      title: "Selenium WebDriver'da Locator Stratejileri",
+      date: "30.04.2025",
+      excerpt: "Merhabalar! 👋 Bu yazımda, Selenium WebDriver'da web elementlerini bulmak için kullanılan locator stratejilerini ele alacağım. Doğru locator seçimi...",
+      link: "https://medium.com/@resatkvc/selenium-webdriver-locator-stratejileri"
+    },
+    {
+      title: "Page Object Model (POM) Design Pattern",
+      date: "25.04.2025",
+      excerpt: "Merhabalar! 👋 Bu yazımda, test otomasyonunda en çok kullanılan design pattern'lerden biri olan Page Object Model (POM)'i ele alacağım. POM, test...",
+      link: "https://medium.com/@resatkvc/page-object-model-pom"
+    },
+    {
+      title: "Cucumber ile BDD Test Otomasyonu",
+      date: "20.04.2025",
+      excerpt: "Merhabalar! 👋 Bu yazımda, Behavior Driven Development (BDD) yaklaşımını destekleyen Cucumber framework'ünü ele alacağım. Cucumber, test senaryolarını...",
+      link: "https://medium.com/@resatkvc/cucumber-bdd-test-otomasyonu"
     }
   ];
 
