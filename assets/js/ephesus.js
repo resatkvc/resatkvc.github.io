@@ -204,29 +204,22 @@ function initLikeAndBookmark() {
 
 // Medium Blog Entegrasyonu
 async function loadMediumPosts() {
-  const mediumUsername = 'kavciresat'; // Medium kullanıcı adınız
-  const rssUrl = `https://medium.com/feed/@${mediumUsername}`;
+  const mediumUsername = 'kavciresat';
   
   try {
-    // CORS proxy kullanarak RSS feed'i çek
-    const proxyUrl = 'https://api.allorigins.win/raw?url=';
-    const response = await fetch(proxyUrl + encodeURIComponent(rssUrl));
-    const xmlText = await response.text();
+    // Medium RSS feed'ini çek
+    const response = await fetch(`https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@${mediumUsername}`);
+    const data = await response.json();
     
-    // XML'i parse et
-    const parser = new DOMParser();
-    const xmlDoc = parser.parseFromString(xmlText, 'text/xml');
-    const items = xmlDoc.querySelectorAll('item');
-    
-    // Medium yazılarını göster
-    displayMediumPosts(items);
+    if (data.status === 'ok' && data.items) {
+      displayMediumPosts(data.items);
+    } else {
+      throw new Error('Medium feed yüklenemedi');
+    }
   } catch (error) {
     console.error('Medium posts yüklenemedi:', error);
-    // Hata durumunda loading mesajını kaldır
-    const mediumContainer = document.getElementById('mediumPosts');
-    if (mediumContainer) {
-      mediumContainer.innerHTML = '<div class="medium-section"><h2>📝 Medium Blog Yazılarım</h2><p>Yazılar yüklenirken bir hata oluştu. <a href="https://medium.com/@kavciresat" target="_blank">Medium profilinizi ziyaret edin</a>.</p></div>';
-    }
+    // Hata durumunda manuel linkler göster
+    displayManualMediumPosts();
   }
 }
 
@@ -236,13 +229,11 @@ function displayMediumPosts(items) {
   
   let html = '<div class="medium-section"><h2>📝 Medium Blog Yazılarım</h2><div class="medium-grid">';
   
-  items.forEach((item, index) => {
-    if (index >= 6) return; // Sadece son 6 yazıyı göster
-    
-    const title = item.querySelector('title')?.textContent || '';
-    const link = item.querySelector('link')?.textContent || '';
-    const pubDate = item.querySelector('pubDate')?.textContent || '';
-    const description = item.querySelector('description')?.textContent || '';
+  items.slice(0, 6).forEach(item => {
+    const title = item.title || '';
+    const link = item.link || '';
+    const pubDate = item.pubDate || '';
+    const description = item.description || '';
     
     // Tarihi formatla
     const date = new Date(pubDate);
@@ -265,12 +256,37 @@ function displayMediumPosts(items) {
   mediumContainer.innerHTML = html;
 }
 
-// Sayfa yüklendiğinde Medium yazılarını yükle
+function displayManualMediumPosts() {
+  const mediumContainer = document.getElementById('mediumPosts');
+  if (!mediumContainer) return;
+  
+  const html = `
+    <div class="medium-section">
+      <h2>📝 Medium Blog Yazılarım</h2>
+      <div class="medium-grid">
+        <div class="medium-post">
+          <a href="https://medium.com/@kavciresat" target="_blank" class="medium-title">Medium Profilim</a>
+          <div class="medium-date">📅 Tüm yazılarım</div>
+          <div class="medium-excerpt">Test otomasyonu, API testleri ve yazılım test süreçleri hakkında yazılarımı Medium'da bulabilirsiniz.</div>
+          <a href="https://medium.com/@kavciresat" target="_blank" class="medium-read-more">Medium'a Git →</a>
+        </div>
+      </div>
+    </div>
+  `;
+  
+  mediumContainer.innerHTML = html;
+}
+
+// Sayfa yüklendiğinde animasyonları başlat
 document.addEventListener('DOMContentLoaded', function() {
   initScrollAnimations();
   initSearchAndFilter();
   initLikeAndBookmark();
-  loadMediumPosts();
+  
+  // Medium yazılarını yükle
+  setTimeout(() => {
+    loadMediumPosts();
+  }, 1000);
   
   // Smooth scroll için link tıklamalarını yakala
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
