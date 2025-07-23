@@ -15,21 +15,7 @@ discus-identifier: XX
 author:
   name:  Reşat Kavcı
   bio: |
-    <strong>Software Test Automation Engineer</strong><br>
-    Passionate about creating efficient and scalable test frameworks using the latest tools and technologies.<br><br>
-    
-    <strong>Professional Experience:</strong><br>
-    • Digitürk → Software Test Automation Engineer<br>
-    • TekhneLogos → Software Test Engineer<br><br>
-    
-    <strong>Technologies I Use:</strong><br>
-    <strong>Programming Languages:</strong> Java, Python, Ruby<br>
-    <strong>Testing Tools:</strong> Selenium, Cucumber, JUnit, TestNG, Maven, Karate, Capybara, Playwright, Cypress<br>
-    <strong>Frameworks & Methodologies:</strong> POM (Page Object Model), BDD (Behavior-Driven Development)<br>
-    <strong>Integration Tools:</strong> Azure DevOps, Jenkins, Docker, Swagger, Postman<br>
-    <strong>API Testing:</strong> RESTful services with Postman and Swagger, SOAP testing with SOAP UI<br><br>
-    
-    <strong>Contact:</strong> kavciresat@gmail.com
+    <strong>Software Test Automation Engineer</strong>
   picture: assets\img\profil.jpg
   github: resatkvc # github username
   #twitter: furkanbilginn # twitter username

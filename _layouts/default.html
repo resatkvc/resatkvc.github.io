@@ -4,33 +4,36 @@
 		<a href="{{ site.url }}{{ site.baseurl }}"><img src="{{site.author.picture}}" class="profile-image"></a>
 		<div class="profile-about">
 			<h2 style="margin-bottom: 0; font-weight: 700;">{{site.author.name}}</h2>
-			{% if site.author.facebook %}
-				<a href="https://facebook.com/{{site.author.facebook}}" target="_blank"><img src="assets/images/icon/facebook.svg" class="social-icon"></a>
-			{% endif %}
-			{% if site.author.twitter %}
-				<a href="https://twitter.com/{{site.author.twitter}}" target="_blank"><img src="assets/images/icon/twitter.svg" class="social-icon"></a>
-			{% endif %}
-			{% if site.author.instagram %}
-				<a href="https://instagram.com/{{site.author.instagram}}" target="_blank"><img src="assets/images/icon/instagram.svg" class="social-icon"></a>
-			{% endif %}
-			{% if site.author.youtube %}
-				<a href="https://youtube.com/{{site.author.youtube}}" target="_blank"><img src="assets/images/icon/youtube.svg" class="social-icon"></a>
-			{% endif %}
-			{% if site.author.linkedin %}
-				<a href="https://www.linkedin.com/in/{{site.author.linkedin}}" target="_blank"><img src="assets/images/icon/linkedin.svg" class="social-icon"></a>
-			{% endif %}
-			{% if site.author.github %}
-				<a href="https://github.com/{{site.author.github}}" target="_blank"><img src="assets/images/icon/github.svg" class="social-icon"></a>
-			{% endif %}
-			{% if site.author.medium %}
-				<a href="https://medium.com/@{{site.author.medium}}" target="_blank"><img src="assets/images/icon/medium.svg" class="social-icon"></a>
-			{% endif %}
-			{% if site.author.facebook %}
-				<a href="about"><img src="assets/images/icon/me.svg" class="social-icon"></a>
-			{% endif %}
-			<br>
 			<div class="profile-bio">
 				{{ site.author.bio }}
+			</div>
+			
+			<div class="social-links">
+				{% if site.author.instagram %}
+					<a href="https://instagram.com/{{site.author.instagram}}" target="_blank" title="Instagram">
+						<img src="assets/images/icon/instagram.svg" class="social-icon">
+					</a>
+				{% endif %}
+				{% if site.author.linkedin %}
+					<a href="https://www.linkedin.com/in/{{site.author.linkedin}}" target="_blank" title="LinkedIn">
+						<img src="assets/images/icon/linkedin.svg" class="social-icon">
+					</a>
+				{% endif %}
+				{% if site.author.github %}
+					<a href="https://github.com/{{site.author.github}}" target="_blank" title="GitHub">
+						<img src="assets/images/icon/github.svg" class="social-icon">
+					</a>
+				{% endif %}
+				{% if site.author.medium %}
+					<a href="https://medium.com/@{{site.author.medium}}" target="_blank" title="Medium">
+						<img src="assets/images/icon/medium.svg" class="social-icon">
+					</a>
+				{% endif %}
+				{% if site.author.email %}
+					<a href="mailto:{{site.author.email}}" title="Email">
+						<img src="assets/images/icon/me.svg" class="social-icon">
+					</a>
+				{% endif %}
 			</div>
 			
 			<!-- Technology Stack -->

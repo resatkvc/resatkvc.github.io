@@ -804,15 +804,64 @@ html {
 
 /* Profil Bio Stilleri */
 .profile-bio {
-  margin: 16px 0;
-  line-height: 1.6;
-  color: var(--primary-font-color);
-  font-size: 14px;
+  margin: 8px 0 16px 0;
+  line-height: 1.4;
+  color: var(--primary-color);
+  font-size: 16px;
+  font-weight: 600;
 }
 
 .profile-bio strong {
   color: var(--primary-color);
   font-weight: 600;
+}
+
+/* Sosyal Medya Linkleri */
+.social-links {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--bg-color);
+  border: 1px solid var(--border-color);
+  transition: var(--transition);
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  background: var(--gradient-primary);
+  border-color: var(--primary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+.social-links .social-icon {
+  width: 20px;
+  height: 20px;
+  filter: var(--social-icon-filter);
+  transition: var(--transition);
+}
+
+.social-links a:hover .social-icon {
+  filter: brightness(0) invert(1);
+}
+
+/* Dark mode için sosyal ikon filtreleri */
+[data-theme="dark"] .social-links .social-icon {
+  filter: invert(100%) sepia(50%) saturate(0%) hue-rotate(360deg) brightness(100%) contrast(100%);
+}
+
+[data-theme="dark"] .social-links a:hover .social-icon {
+  filter: brightness(0) invert(1);
 }
 
 /* Technology Stack */
