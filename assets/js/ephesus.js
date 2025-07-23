@@ -310,17 +310,62 @@ function displayMediumPosts(items) {
 function displayManualMediumPosts() {
   const mediumContainer = document.getElementById('mediumPosts');
   if (!mediumContainer) return;
-  
+
+  const mediumPosts = [
+    {
+      title: "Docker + LocalStack ile AWS S3 & MySQL Tabanlı Selenium Test Otomasyonu",
+      date: "22.07.2025",
+      excerpt: "Modern test otomasyonu süreçlerinde, test sonuçlarını güvenli bir şekilde saklamak ve veritabanı entegrasyonlarıyla test verilerini etkin şekilde yön...",
+      link: "https://medium.com/@resatkvc/docker-localstack-ile-aws-s3-mysql-tabanlı-selenium-test-otomasyonu"
+    },
+    {
+      title: "Docker Üzerinde PostgreSQL Kurulumu: IDE ile Entegrasyon ve PgAdmin ile Görsel Yönetim",
+      date: "14.07.2025",
+      excerpt: "Merhabalar! 👋 Modern yazılım geliştirme süreçlerinde, veritabanlarını izole ve kontrol edilebilir ortamlarda çalıştırmak artık bir ihtiyaç haline g...",
+      link: "https://medium.com/@resatkvc/docker-üzerinde-postgresql-kurulumu"
+    },
+    {
+      title: "Java'da Şart Blokları Nedir? Test Otomasyonunda Nasıl Kullanılır?",
+      date: "23.06.2025",
+      excerpt: "Merhaba 👋 Bu yazıda Java'da karar verme mekanizmalarını oluşturan şart bloklarını (diğer adıyla koşul ifadeleri) ele alacağım. Şart blokları, pro...",
+      link: "https://medium.com/@resatkvc/java-şart-blokları-test-otomasyonu"
+    },
+    {
+      title: "Java'da Döngüler Nedir? Test Otomasyonunda Nasıl Kullanılır?",
+      date: "20.06.2025",
+      excerpt: "Merhaba 👋 Bu yazıda Java öğrenen çoğu kişinin aklındaki şu soruya yanıt arayacağız: 💡 \"Döngüler gerçek projelerde nerede ve nasıl kullanılıyor?\"...",
+      link: "https://medium.com/@resatkvc/java-döngüler-test-otomasyonu"
+    },
+    {
+      title: "Uygulamalı Test Otomasyon Siteleri",
+      date: "12.06.2025",
+      excerpt: "Merhabalar Bu yazımda, test otomasyon alanında pratik yapmak ve mevcut becerilerini geliştirmek isteyenler için kategorilere ayrılmış demo test sitel...",
+      link: "https://medium.com/@resatkvc/uygulamalı-test-otomasyon-siteleri"
+    },
+    {
+      title: "Java Operatörleri Nedir? Test Otomasyonunda Nasıl ve Nerede Kullanılır?",
+      date: "03.06.2025",
+      excerpt: "Merhabalar Bu yazımda, herkesin sıkça duyduğu ve gördüğü ama ne olduğunu ve ne için kullanıldığını merak ettiği bir konuya değinmek istiyorum. Operatö...",
+      link: "https://medium.com/@resatkvc/java-operatörleri-test-otomasyonu"
+    }
+  ];
+
+  const postsHTML = mediumPosts.map(post => `
+    <div class="medium-post" onclick="window.open('${post.link}', '_blank')">
+      <h3 class="medium-title">${post.title}</h3>
+      <span class="medium-date">${post.date}</span>
+      <p class="medium-excerpt">${post.excerpt}</p>
+      <a href="${post.link}" class="medium-read-more" target="_blank" onclick="event.stopPropagation()">
+        Devamını Oku
+      </a>
+    </div>
+  `).join('');
+
   const html = `
     <div class="medium-section">
       <h2>📝 Medium Blog Yazılarım</h2>
       <div class="medium-grid">
-        <div class="medium-post">
-          <a href="https://medium.com/@kavciresat" target="_blank" class="medium-title">Medium Profilim</a>
-          <div class="medium-date">📅 Tüm yazılarım</div>
-          <div class="medium-excerpt">Test otomasyonu, API testleri ve yazılım test süreçleri hakkında yazılarımı Medium'da bulabilirsiniz.</div>
-          <a href="https://medium.com/@kavciresat" target="_blank" class="medium-read-more">Medium'a Git →</a>
-        </div>
+        ${postsHTML}
       </div>
     </div>
   `;
