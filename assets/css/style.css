@@ -773,3 +773,238 @@ html {
     justify-content: center;
   }
 }
+
+/* Profil Bio Stilleri */
+.profile-bio {
+  margin: 16px 0;
+  line-height: 1.6;
+  color: var(--primary-font-color);
+  font-size: 14px;
+}
+
+.profile-bio strong {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+/* Technology Stack */
+.tech-stack {
+  margin: 20px 0;
+  padding: 16px;
+  background: var(--card-bg);
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+}
+
+.tech-stack h3 {
+  margin: 0 0 12px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--primary-font-color);
+}
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  gap: 12px;
+}
+
+.tech-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px;
+  background: var(--bg-color);
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.tech-item:hover {
+  background: var(--bg-hover-color);
+  border-color: var(--primary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.1);
+}
+
+.tech-icon {
+  font-size: 24px;
+  margin-bottom: 4px;
+}
+
+.tech-name {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--primary-font-color);
+  text-align: center;
+}
+
+/* Ana Sayfa Butonu */
+.home-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.home-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  background: var(--gradient-primary);
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 14px;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+  transition: var(--transition);
+  border: none;
+  cursor: pointer;
+}
+
+.home-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(99, 102, 241, 0.4);
+  color: white;
+  text-decoration: none;
+}
+
+/* Responsive Design for Tech Stack */
+@media only screen and (max-width: 768px) {
+  .tech-grid {
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    gap: 8px;
+  }
+  
+  .tech-icon {
+    font-size: 20px;
+  }
+  
+  .tech-name {
+    font-size: 10px;
+  }
+  
+  .home-button {
+    top: 10px;
+    right: 10px;
+  }
+  
+  .home-btn {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+}
+
+/* Medium Blog Yazıları */
+.medium-posts-container {
+  width: 100%;
+  margin-bottom: 32px;
+}
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  color: var(--secondary-font-color);
+}
+
+.loading-container p {
+  margin-top: 16px;
+  font-size: 14px;
+}
+
+.medium-section {
+  width: 100%;
+}
+
+.medium-section h2 {
+  margin-bottom: 24px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-font-color);
+  text-align: center;
+}
+
+.medium-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-bottom: 32px;
+}
+
+.medium-post {
+  background: var(--card-bg);
+  border-radius: var(--card-border-radius);
+  padding: 20px;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--card-shadow);
+  transition: var(--transition);
+}
+
+.medium-post:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--card-shadow-hover);
+  border-color: var(--primary-color);
+}
+
+.medium-title {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--primary-font-color);
+  text-decoration: none;
+  margin-bottom: 8px;
+  line-height: 1.4;
+  transition: var(--transition);
+}
+
+.medium-title:hover {
+  color: var(--primary-color);
+}
+
+.medium-date {
+  font-size: 0.8rem;
+  color: var(--secondary-font-color);
+  margin-bottom: 12px;
+}
+
+.medium-excerpt {
+  font-size: 0.9rem;
+  color: var(--secondary-font-color);
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.medium-read-more {
+  display: inline-block;
+  color: var(--primary-color);
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.medium-read-more:hover {
+  color: var(--primary-dark);
+  transform: translateX(4px);
+}
+
+/* Responsive Design for Medium Posts */
+@media only screen and (max-width: 768px) {
+  .medium-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .medium-post {
+    padding: 16px;
+  }
+  
+  .medium-title {
+    font-size: 1rem;
+  }
+}

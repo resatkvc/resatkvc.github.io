@@ -26,6 +26,14 @@ layout: default
   </div>
 </div>
 
+<!-- Medium Blog Yazıları -->
+<div id="mediumPosts" class="medium-posts-container">
+  <div class="loading-container">
+    <div class="loading"></div>
+    <p>Medium yazıları yükleniyor...</p>
+  </div>
+</div>
+
 <div class="post-container" id="postContainer">
 	{% for post in paginator.posts %}
         <div class="post-list" data-title="{{ post.title | downcase }}" data-tags="{{ post.tags | join: ' ' | downcase }}" data-categories="{{ post.categories | join: ' ' | downcase }}">

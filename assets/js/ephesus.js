@@ -202,11 +202,70 @@ function initLikeAndBookmark() {
   });
 }
 
-// Sayfa yüklendiğinde animasyonları başlat
+// Medium Blog Entegrasyonu
+async function loadMediumPosts() {
+  const mediumUsername = 'resatkvc'; // Medium kullanıcı adınız
+  const rssUrl = `https://medium.com/feed/@${mediumUsername}`;
+  
+  try {
+    // CORS proxy kullanarak RSS feed'i çek
+    const proxyUrl = 'https://api.allorigins.win/raw?url=';
+    const response = await fetch(proxyUrl + encodeURIComponent(rssUrl));
+    const xmlText = await response.text();
+    
+    // XML'i parse et
+    const parser = new DOMParser();
+    const xmlDoc = parser.parseFromString(xmlText, 'text/xml');
+    const items = xmlDoc.querySelectorAll('item');
+    
+    // Medium yazılarını göster
+    displayMediumPosts(items);
+  } catch (error) {
+    console.error('Medium posts yüklenemedi:', error);
+  }
+}
+
+function displayMediumPosts(items) {
+  const mediumContainer = document.getElementById('mediumPosts');
+  if (!mediumContainer) return;
+  
+  let html = '<div class="medium-section"><h2>📝 Medium Blog Yazılarım</h2><div class="medium-grid">';
+  
+  items.forEach((item, index) => {
+    if (index >= 6) return; // Sadece son 6 yazıyı göster
+    
+    const title = item.querySelector('title')?.textContent || '';
+    const link = item.querySelector('link')?.textContent || '';
+    const pubDate = item.querySelector('pubDate')?.textContent || '';
+    const description = item.querySelector('description')?.textContent || '';
+    
+    // Tarihi formatla
+    const date = new Date(pubDate);
+    const formattedDate = date.toLocaleDateString('tr-TR');
+    
+    // HTML'den temizle
+    const cleanDescription = description.replace(/<[^>]*>/g, '').substring(0, 150) + '...';
+    
+    html += `
+      <div class="medium-post">
+        <a href="${link}" target="_blank" class="medium-title">${title}</a>
+        <div class="medium-date">📅 ${formattedDate}</div>
+        <div class="medium-excerpt">${cleanDescription}</div>
+        <a href="${link}" target="_blank" class="medium-read-more">Devamını Oku →</a>
+      </div>
+    `;
+  });
+  
+  html += '</div></div>';
+  mediumContainer.innerHTML = html;
+}
+
+// Sayfa yüklendiğinde Medium yazılarını yükle
 document.addEventListener('DOMContentLoaded', function() {
   initScrollAnimations();
   initSearchAndFilter();
   initLikeAndBookmark();
+  loadMediumPosts();
   
   // Smooth scroll için link tıklamalarını yakala
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {

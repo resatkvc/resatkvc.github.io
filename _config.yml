@@ -14,13 +14,54 @@ discus-identifier: XX
 # Author settings
 author:
   name:  Reşat KAVCI
-  bio: Digitürk→ Software Automation Engineer </br> TekhneLogos→ Software Test Engineer </br> E-mail→ kavciresat@gmail.com
+  bio: |
+    <strong>Test Automation Engineer</strong><br>
+    Passionate about creating efficient and scalable test frameworks using the latest tools and technologies.<br><br>
+    
+    <strong>Professional Experience:</strong><br>
+    • Digitürk → Software Test Automation Engineer<br>
+    • TekhneLogos → Software Test Engineer<br><br>
+    
+    <strong>Technologies I Use:</strong><br>
+    <strong>Programming Languages:</strong> Java, Python, Ruby<br>
+    <strong>Testing Tools:</strong> Selenium, Cucumber, JUnit, TestNG, Maven, Karate, Capybara, Playwright, Cypress<br>
+    <strong>Frameworks & Methodologies:</strong> POM (Page Object Model), BDD (Behavior-Driven Development)<br>
+    <strong>Integration Tools:</strong> Azure DevOps, Jenkins, Docker, Swagger, Postman<br>
+    <strong>API Testing:</strong> RESTful services with Postman and Swagger, SOAP testing with SOAP UI<br><br>
+    
+    <strong>Contact:</strong> kavciresat@gmail.com
   picture: assets\img\profil.jpg
   github: resatkvc # github username
   #twitter: furkanbilginn # twitter username
   instagram: resatkvc # instagram username
   linkedin: kavci # instagram username
   email: kavciresat@gmail.com # email adress
+  medium: resatkvc # medium username
+  technologies:
+    - name: Java
+      icon: ☕
+    - name: Python
+      icon: 🐍
+    - name: Ruby
+      icon: 💎
+    - name: Selenium
+      icon: 🚗
+    - name: Cucumber
+      icon: 🥒
+    - name: TestNG
+      icon: ⚡
+    - name: Karate
+      icon: 🥋
+    - name: Maven
+      icon: 📦
+    - name: Jenkins
+      icon: 🤖
+    - name: Docker
+      icon: 🐳
+    - name: Postman
+      icon: 📮
+    - name: Azure DevOps
+      icon: ☁️
 
 
 # URL settings

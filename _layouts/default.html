@@ -22,17 +22,43 @@
 			{% if site.author.github %}
 				<a href="https://github.com/{{site.author.github}}" target="_blank"><img src="assets/images/icon/github.svg" class="social-icon"></a>
 			{% endif %}
+			{% if site.author.medium %}
+				<a href="https://medium.com/@{{site.author.medium}}" target="_blank"><img src="assets/images/icon/medium.svg" class="social-icon"></a>
+			{% endif %}
 			{% if site.author.facebook %}
 				<a href="about"><img src="assets/images/icon/me.svg" class="social-icon"></a>
 			{% endif %}
 			<br>
-			{{ site.author.bio }}
-			<br>
+			<div class="profile-bio">
+				{{ site.author.bio }}
+			</div>
+			
+			<!-- Technology Stack -->
+			<div class="tech-stack">
+				<h3>🛠️ Tech Stack</h3>
+				<div class="tech-grid">
+					{% for tech in site.author.technologies %}
+						<div class="tech-item">
+							<span class="tech-icon">{{ tech.icon }}</span>
+							<span class="tech-name">{{ tech.name }}</span>
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+			
 			<div class="mode" id="mode-switcher" onclick="toggleNightMode();">
 				<span></span>
 			</div>
 		</div>
 	</div>
+	
+	<!-- Home Button -->
+	<div class="home-button">
+		<a href="{{ site.url }}{{ site.baseurl }}" class="home-btn">
+			🏠 Ana Sayfa
+		</a>
+	</div>
+	
 	{{ content }}
 	<div class="footer">
 		<span>Made with <font color="red">♥</font> on Earth, a minimalist Jekyll Theme by <a href="https://hakan.io"><b>Hakan</b></a></span>
