@@ -11,6 +11,57 @@ function toggleNightMode(){
 	}
 }
 
+// Lightbox Functions
+function openLightbox(imageSrc) {
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  
+  lightboxImg.src = imageSrc;
+  lightbox.style.display = 'flex';
+  lightbox.style.alignItems = 'center';
+  lightbox.style.justifyContent = 'center';
+  
+  // Prevent body scroll
+  document.body.style.overflow = 'hidden';
+  
+  // Prevent event bubbling
+  event.preventDefault();
+  event.stopPropagation();
+}
+
+function closeLightbox() {
+  const lightbox = document.getElementById('lightbox');
+  lightbox.style.display = 'none';
+  
+  // Restore body scroll
+  document.body.style.overflow = 'auto';
+}
+
+// Close lightbox with Escape key
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    closeLightbox();
+  }
+});
+
+// Close lightbox when clicking outside the image
+document.addEventListener('DOMContentLoaded', function() {
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  
+  if (lightbox && lightboxImg) {
+    lightbox.addEventListener('click', function(e) {
+      if (e.target === lightbox) {
+        closeLightbox();
+      }
+    });
+    
+    lightboxImg.addEventListener('click', function(e) {
+      e.stopPropagation();
+    });
+  }
+});
+
 // Scroll Animasyonları
 function initScrollAnimations() {
   const observerOptions = {
