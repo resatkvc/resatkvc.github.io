@@ -7,7 +7,8 @@ permalink: /test-senaryosu-ve-test-case-nedir-farkları-nelerdir/
 categories: yazilimtest
 tags: [Test, QA, Testing, Test Senaryosu, Test Case, Yazılım Test]
 img: assets\img\posts\test-senaryosu-test-case\baslik.jpg
-description: 'test senaryosu ve test case nedir?farkları nelerdir?'
+description: 'test senaryosu and test case nedir?farkları nelerdir?'
+excerpt: 'Test senaryosu ve test case kavramları test süreçlerinde sıkça karıştırılan terimlerdir. Bu yazımda bu iki kavramın ne olduğunu ve aralarındaki farkları detaylı olarak açıklayacağım.'
 ---
 
 Bugün sizlere test senaryoları ve test caseleri hakkında ayrıntılar vermek istiyorum.Yazılım test bölümlerinde sıklıkla kullanılan bu kavramlar, test ekiplerinde başarılı bir test stratejileri oluşturabilmek için büyük öneme sahiptir.

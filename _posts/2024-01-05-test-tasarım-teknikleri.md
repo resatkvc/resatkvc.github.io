@@ -8,6 +8,7 @@ categories: yazilimtest
 tags: [Test, QA, Testing, Black Box Testing, White Box Testing]
 img: /assets/img/posts/software-development-life-cycle/yazılım-yasam-döngüsü-asamaları.jpg
 description: 'test tasarım teknikleri nelerdir'
+excerpt: 'Test tasarım teknikleri, yazılım test süreçlerinde etkili test senaryoları oluşturmak için kullanılan sistematik yaklaşımlardır. Bu yazımda en yaygın kullanılan test tasarım tekniklerini detaylı olarak inceleyeceğiz.'
 ---
 
 Test tasarım teknikleri, Yazılım testlerinde kullanılan senaryo ve durumları oluşturan yöntemleri ifade eder. Bu teknikler, Yazılımın doğruluğunu kontrol etmek, hataları bulmak ve gereksinimlere uygunluğunu doğrulamak amacıyla kullanılır. Yazılım test sürecini daha sistemli, etkili ve kapsamlı hale getirmeye yardımcı olurlar.

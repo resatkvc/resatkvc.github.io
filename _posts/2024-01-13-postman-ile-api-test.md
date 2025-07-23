@@ -8,6 +8,7 @@ categories: postman servis testleri
 tags: [Test, QA, Testing, Postman, PostmanAPI, Servis Testleri]
 img: assets\img\posts\postman-api-test\baslik.jpg
 description: 'Postman ile API Testi'
+excerpt: 'Bu yazımda sizlere Postman ile API(Application Programming Interface) testinin nasıl yapılacağından bahsedeğim. Öncelike bu iki kavram nedir kısaca hadi açıklayalım.'
 ---
 
 Merhaba Herkese,

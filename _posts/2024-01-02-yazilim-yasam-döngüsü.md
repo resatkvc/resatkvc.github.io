@@ -8,6 +8,7 @@ categories: SoftwareDevelopment
 tags: [Test, Software Test, QA, Testing, SDLC]
 img: /assets/img/posts/software-development-life-cycle/yazılım-yasam-döngüsü-asamaları.jpg
 description: 'Yazılımın başlangıcından sonuna kadar geçirdiği aşamaların süreçsel ve yönetimsel bir yaklaşımla yönetilmesine ve adı gibi bir döngü içinde varolan bir süreçtir. Bu döngü altı(6) adımdan oluşmaktadır.'
+excerpt: 'Yazılım yaşam döngüsü, bir yazılım projesinin başlangıcından sonuna kadar geçirdiği tüm aşamaları kapsayan sistematik bir süreçtir. Bu yazımda SDLC aşamalarını ve modellerini detaylı olarak inceleyeceğiz.'
 ---
 
 ![Picture description](assets\img\posts\software-development-life-cycle\yazılım-yasam-döngüsü-asamaları.jpg){: .center-image }
