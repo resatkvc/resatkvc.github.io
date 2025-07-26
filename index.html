@@ -34,70 +34,69 @@ layout: default
   </div>
 </div>
 
+<!-- Post Cards -->
 <div class="post-container" id="postContainer">
 	{% for post in paginator.posts %}
         <div class="post-list" data-title="{{ post.title | downcase }}" data-tags="{{ post.tags | join: ' ' | downcase }}" data-categories="{{ post.categories | join: ' ' | downcase }}">
-            <div class="post-header-section">
-                {% if post.img %}
-                    <div class="post-image">
-                        <img src="{{ site.url }}{{ site.baseurl }}/{{ post.img }}" alt="{{ post.title }}" loading="lazy">
-                    </div>
+            {% if post.img %}
+                <div class="post-image">
+                    <img src="{{ site.url }}{{ site.baseurl }}/{{ post.img }}" alt="{{ post.title }}" loading="lazy">
+                </div>
+            {% endif %}
+            
+            <div class="post-content">
+                <a class="post-title" href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+                <time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">{{ post.date | date: "%d %B %Y" }}</time>
+                
+                {% if post.excerpt %}
+                    <div class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</div>
                 {% endif %}
                 
-                <div class="post-content">
-                    <a class="post-title" href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-                    <time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">{{ post.date | date: "%d.%m.%Y" }}</time>
-                    
-                    {% if post.excerpt %}
-                        <div class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</div>
+                <div class="post-meta">
+                    {% if post.tags %}
+                        <div class="post-tags">
+                            {% for tag in post.tags limit:3 %}
+                                <a href="{{ site.url }}{{ site.baseurl }}/tags.html#{{ tag }}" class="post-tag">#{{ tag }}</a>
+                            {% endfor %}
+                        </div>
                     {% endif %}
                     
-                    <div class="post-meta">
-                        {% if post.tags %}
-                            <div class="post-tags">
-                                {% for tag in post.tags limit:3 %}
-                                    <a href="{{ site.url }}{{ site.baseurl }}/tags.html#{{ tag }}" class="post-tag">#{{ tag }}</a>
-                                {% endfor %}
-                            </div>
-                        {% endif %}
-                        
-                        <div class="post-stats">
-                            <div class="read-time">
-                                {% assign words = post.content | number_of_words %}
-                                {% assign read_time = words | divided_by: 200 | plus: 1 %}
-                                📖 {{ read_time }} dk okuma
-                            </div>
-                            <div class="post-category">
-                                {% if post.categories %}
-                                    📂 {{ post.categories | first }}
-                                {% endif %}
-                            </div>
+                    <div class="post-stats">
+                        <div class="read-time">
+                            {% assign words = post.content | number_of_words %}
+                            {% assign read_time = words | divided_by: 200 | plus: 1 %}
+                            📖 {{ read_time }} dk okuma
+                        </div>
+                        <div class="post-category">
+                            {% if post.categories %}
+                                📂 {{ post.categories | first }}
+                            {% endif %}
                         </div>
                     </div>
+                </div>
+                
+                <!-- Sosyal Medya Butonları -->
+                <div class="social-actions">
+                    <div class="action-buttons">
+                        <button class="action-btn like-btn" data-post="{{ post.url }}" title="Beğen">
+                            <span class="action-icon">❤️</span>
+                            <span class="action-count">0</span>
+                        </button>
+                        <button class="action-btn bookmark-btn" data-post="{{ post.url }}" title="Kaydet">
+                            <span class="action-icon">🔖</span>
+                        </button>
+                    </div>
                     
-                    <!-- Sosyal Medya Butonları -->
-                    <div class="social-actions">
-                        <div class="action-buttons">
-                            <button class="action-btn like-btn" data-post="{{ post.url }}" title="Beğen">
-                                <span class="action-icon">❤️</span>
-                                <span class="action-count">0</span>
-                            </button>
-                            <button class="action-btn bookmark-btn" data-post="{{ post.url }}" title="Kaydet">
-                                <span class="action-icon">🔖</span>
-                            </button>
-                        </div>
-                        
-                        <div class="share-buttons">
-                            <button class="share-btn twitter-btn" onclick="shareToTwitter('{{ post.title }}', '{{ site.url }}{{ site.baseurl }}{{ post.url }}')" title="Twitter'da Paylaş">
-                                <span class="share-icon">🐦</span>
-                            </button>
-                            <button class="share-btn linkedin-btn" onclick="shareToLinkedIn('{{ post.title }}', '{{ site.url }}{{ site.baseurl }}{{ post.url }}')" title="LinkedIn'de Paylaş">
-                                <span class="share-icon">💼</span>
-                            </button>
-                            <button class="share-btn whatsapp-btn" onclick="shareToWhatsApp('{{ post.title }}', '{{ site.url }}{{ site.baseurl }}{{ post.url }}')" title="WhatsApp'ta Paylaş">
-                                <span class="share-icon">📱</span>
-                            </button>
-                        </div>
+                    <div class="share-buttons">
+                        <button class="share-btn twitter-btn" onclick="shareToTwitter('{{ post.title }}', '{{ site.url }}{{ site.baseurl }}{{ post.url }}')" title="Twitter'da Paylaş">
+                            <span class="share-icon">🐦</span>
+                        </button>
+                        <button class="share-btn linkedin-btn" onclick="shareToLinkedIn('{{ post.title }}', '{{ site.url }}{{ site.baseurl }}{{ post.url }}')" title="LinkedIn'de Paylaş">
+                            <span class="share-icon">💼</span>
+                        </button>
+                        <button class="share-btn whatsapp-btn" onclick="shareToWhatsApp('{{ post.title }}', '{{ site.url }}{{ site.baseurl }}{{ post.url }}')" title="WhatsApp'ta Paylaş">
+                            <span class="share-icon">📱</span>
+                        </button>
                     </div>
                 </div>
             </div>

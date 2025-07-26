@@ -1,65 +1,28 @@
 function toggleNightMode(){
 	if(document.documentElement.getAttribute('data-theme') == 'light'){
 		document.documentElement.setAttribute('data-theme', 'dark');
-		document.getElementById('mode-switcher').classList.add('active');
+		document.getElementById('mode-switcher').querySelector('span').textContent = '☀️';
 		localStorage.setItem("theme","dark");
 	}
 	else{
 		document.documentElement.setAttribute('data-theme', 'light');
-		document.getElementById('mode-switcher').classList.remove('active');
-		localStorage.setItem("theme","");
+		document.getElementById('mode-switcher').querySelector('span').textContent = '🌙';
+		localStorage.setItem("theme","light");
 	}
 }
 
-// Lightbox Functions
-function openLightbox(imageSrc) {
-  const lightbox = document.getElementById('lightbox');
-  const lightboxImg = document.getElementById('lightbox-img');
-  
-  lightboxImg.src = imageSrc;
-  lightbox.style.display = 'flex';
-  lightbox.style.alignItems = 'center';
-  lightbox.style.justifyContent = 'center';
-  
-  // Prevent body scroll
-  document.body.style.overflow = 'hidden';
-  
-  // Prevent event bubbling
-  event.preventDefault();
-  event.stopPropagation();
-}
-
-function closeLightbox() {
-  const lightbox = document.getElementById('lightbox');
-  lightbox.style.display = 'none';
-  
-  // Restore body scroll
-  document.body.style.overflow = 'auto';
-}
-
-// Close lightbox with Escape key
-document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape') {
-    closeLightbox();
-  }
-});
-
-// Close lightbox when clicking outside the image
+// Tema durumunu sayfa yüklendiğinde kontrol et
 document.addEventListener('DOMContentLoaded', function() {
-  const lightbox = document.getElementById('lightbox');
-  const lightboxImg = document.getElementById('lightbox-img');
-  
-  if (lightbox && lightboxImg) {
-    lightbox.addEventListener('click', function(e) {
-      if (e.target === lightbox) {
-        closeLightbox();
-      }
-    });
-    
-    lightboxImg.addEventListener('click', function(e) {
-      e.stopPropagation();
-    });
-  }
+	const savedTheme = localStorage.getItem("theme");
+	const modeSwitcher = document.getElementById('mode-switcher');
+	
+	if (savedTheme === 'dark') {
+		document.documentElement.setAttribute('data-theme', 'dark');
+		modeSwitcher.querySelector('span').textContent = '☀️';
+	} else {
+		document.documentElement.setAttribute('data-theme', 'light');
+		modeSwitcher.querySelector('span').textContent = '🌙';
+	}
 });
 
 // Scroll Animasyonları
@@ -139,12 +102,10 @@ function initSearchAndFilter() {
         categories.includes(currentFilter.toLowerCase());
       
       if (matchesSearch && matchesFilter) {
-        post.classList.remove('hidden');
-        post.classList.add('visible');
+        post.style.display = 'block';
         visibleCount++;
       } else {
-        post.classList.add('hidden');
-        post.classList.remove('visible');
+        post.style.display = 'none';
       }
     });
 
